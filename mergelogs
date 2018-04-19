@@ -1,0 +1,29 @@
+#!/bin/bash
+
+. cluster_topology.sh
+
+#rm -rf /proj/ucare/riza/datadir > /tmp/clreset.log
+
+echo "Merging logs"
+
+cd /tmp
+rm -rf logs
+
+cat $SLAVES_FILE | while read line;
+do
+  echo "$line"
+  ssh $line 'cd /tmp/hadoop-ucare ; tarit logs ;'
+  scp $line:/tmp/hadoop-ucare/logs.tgz /tmp/
+  untarit logs.tgz
+  rm logs.tgz
+done
+
+cd /tmp/logs/
+cp -r $TESTDIR/workGenLogs ./
+mv workGenLogs/genstats.py ./
+chmod -R 774 . 
+
+#cd yarn/userlogs/
+#cp $PSBIN/genstats.py ./
+#sed -i "s/^SLOWNODE=.*/SLOWNODE=8/" genstats.py
+#sed -i "s/^SLOWHOST=.*/SLOWHOST=\"pc812\"/" genstats.py

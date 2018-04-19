@@ -1,0 +1,15 @@
+#!/bin/bash
+
+. cluster_topology.sh
+
+echo "Cleaning up logs" > /tmp/$USER-clcleanup.log
+
+cat $SLAVES_FILE | while read line;
+do
+  echo $line
+  echo "$line" >> /tmp/$USER-clcleanup.log
+  ssh $line \
+   'rm -rf /tmp/hadoop-ucare/logs* ;'  >> /tmp/$USER-clcleanup.log
+done
+
+cat /tmp/$USER-clcleanup.log

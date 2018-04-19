@@ -1,0 +1,12 @@
+
+SUPERGROUP=cc
+
+YARN_RM=localhost
+YARN_RM_IP=127.0.0.1
+YARN_RM_HOSTNAME=localhost
+HDFS_NN=localhost
+HDFS_NN_IP=127.0.0.1
+CLIENT_NODE=localhost
+SLAVES_FILE="$HADOOP_CONF_DIR/slaves"
+
+

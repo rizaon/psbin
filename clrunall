@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. cluster_topology.sh
+
+echo "Running command $1"
+
+cat $SLAVES_FILE | while read line;
+do
+  echo "Running command on $line"
+  ssh $line "$1"
+done
+
