@@ -3,7 +3,7 @@
 . cluster_topology.sh
 
 clstop
-cp $PSBIN/hadoop-etc/templates/standard/* $HADOOP_CONF_DIR/
+cp $PSBIN/hadoop-etc/templates/default-2.7.1/* $HADOOP_CONF_DIR/
 sed_replaceconf.sh
 
 # uncomment lines bellow if total cleanup is desired
