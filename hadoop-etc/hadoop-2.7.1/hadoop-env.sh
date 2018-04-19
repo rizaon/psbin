@@ -21,10 +21,6 @@
 # set JAVA_HOME in this file, so that it is correctly defined on
 # remote nodes.
 
-#export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91.x86_64/jre
-#export HADOOP_CLASSPATH=/proj/ucare/bo/quantcast-qfs-5bcc90c/build/java/hadoop-qfs/hadoop-2.5.1-qfs-.jar
-#export JAVA_LIBRARY_PATH=/proj/ucare/bo/quantcast-qfs-5bcc90c/build/release/lib/
-
 # The java implementation to use.
 export JAVA_HOME=${JAVA_HOME}
 
@@ -100,6 +96,3 @@ export HADOOP_SECURE_DN_PID_DIR=${HADOOP_PID_DIR}
 
 # A string representing this instance of hadoop. $USER by default.
 export HADOOP_IDENT_STRING=$USER
-
-#echo $HADOOP_CLASSPATH
-
