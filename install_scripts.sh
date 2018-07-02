@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
-echo "source $DIR/hadoop-rc.sh" >> ~/.bash_profile
+echo "source $dir/hadoop-rc.sh" >> ~/.bashrc
+

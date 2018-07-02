@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# posix compliant
+# https://stackoverflow.com/questions/29832037/how-to-get-script-directory-in-posix-sh
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
-export PSBIN=${DIR}
+export PSBIN=$dir
 export PR=~/
 
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
