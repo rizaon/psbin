@@ -7,8 +7,8 @@ export PR=~/
 
 export JAVA_HOME=$(dirname $(dirname $(readlink -e $(which javac))))
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
-export HADOOP_PREFIX=${PR}/hadoop-ucare/hadoop-dist/target/hadoop-2.7.1
-export HADOOP_CONF_DIR=${PSBIN}/hadoop-etc/hadoop-2.7.1
+export HADOOP_PREFIX=${PR}/hadoop-ucare/hadoop-dist/target/hadoop-2.1.0-beta
+export HADOOP_CONF_DIR=${PSBIN}/hadoop-etc/hadoop-2.1.0-beta
 export HADOOP_HOME=${HADOOP_PREFIX}
 export HADOOP_LOG_DIR=/tmp/hadoop-ucare/logs/hadoop
 export YARN_LOG_DIR=/tmp/hadoop-ucare/logs/yarn

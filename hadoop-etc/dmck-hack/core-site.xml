@@ -20,7 +20,7 @@
 
 <property>
   <name>fs.defaultFS</name>
-  <value>hdfs://{{HDFS_NN}}:9000</value>
+  <value>hdfs://HDFS_NN:9000</value>
 </property>
 
 <property>
@@ -30,12 +30,12 @@
 
 <property>
   <name>ipc.client.connection.maxidletime</name>
-  <value>10000</value>
+  <value>60000</value>
 </property>
 
 <property>
   <name>ipc.server.listen.queue.size</name>
-  <value>128</value>
+  <value>256</value>
 </property>
 
 </configuration>
