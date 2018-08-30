@@ -1,7 +1,6 @@
 
-dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-
-export PSBIN=$dir
+## PSBIN is injected to rc files when calling install_scripts.sh
+echo "loading PSBIN files from $PSBIN"
 export PR=~/
 
 export JAVA_HOME=$(dirname $(dirname $(readlink -e $(which javac))))
