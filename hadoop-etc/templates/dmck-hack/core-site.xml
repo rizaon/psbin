@@ -20,7 +20,7 @@
 
 <property>
   <name>fs.defaultFS</name>
-  <value>hdfs://HDFS_NN:9000</value>
+  <value>hdfs://{{HDFS_NN}}:9000</value>
 </property>
 
 <property>
