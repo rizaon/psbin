@@ -1,13 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-# posix compliant
-# https://stackoverflow.com/questions/29832037/how-to-get-script-directory-in-posix-sh
-dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 export PSBIN=$dir
 export PR=~/
 
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=$(dirname $(dirname $(readlink -e $(which javac))))
 export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
 export HADOOP_PREFIX=${PR}/hadoop-ucare/hadoop-dist/target/hadoop-2.7.1
 export HADOOP_CONF_DIR=${PSBIN}/hadoop-etc/hadoop-2.7.1
