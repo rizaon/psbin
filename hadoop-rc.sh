@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
 
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
 export PSBIN=$dir
 export PR=~/
