@@ -15,5 +15,5 @@ mv /tmp/temp-bashrc ~/.bashrc
 #append this on top of .zshenv_local
 touch ~/.zshenv_local
 cat /tmp/psbin-source.sh ~/.zshenv_local >> /tmp/temp-zshenv_local
-mv /tmp/temp-zshrc_local ~/.zshenv_local
+mv /tmp/temp-zshenv_local ~/.zshenv_local
 
