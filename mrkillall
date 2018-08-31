@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #mapred job -list | grep job_ | awk '{print $1}'
 #exit

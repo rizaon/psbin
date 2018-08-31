@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 hdfs dfsadmin -report > /tmp/$USER-dfsreport.txt
 yarn node -list -states RUNNING > /tmp/$USER-yarnreport.txt
