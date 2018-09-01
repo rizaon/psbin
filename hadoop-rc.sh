@@ -1,6 +1,6 @@
 
 ## PSBIN is injected to rc files when calling install_scripts.sh
-echo "loading PSBIN files from $PSBIN"
+#echo "loading PSBIN files from $PSBIN"
 export PR=$HOME
 
 export JAVA_HOME=$(dirname $(dirname $(readlink -e $(which javac))))
